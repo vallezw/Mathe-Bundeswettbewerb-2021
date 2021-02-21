@@ -5,23 +5,46 @@
 % Formatting
 %\usepackage[utf8]{inputenc}
 %\usepackage[T2A]{fontenc}
-\usepackage[margin=0.7in]{geometry}
+\usepackage[margin=1.9685in]{geometry}
 \usepackage[titletoc,title]{appendix}
 %\usepackage[russian]{babel}
-
+\usepackage{amssymb}
 % Images
 % https://www.overleaf.com/learn/latex/Inserting_Images
 % https://en.wikibooks.org/wiki/LaTeX/Floats,_Figures_and_Captions
 %\usepackage{float}
 %\usepackage{graphicx}
 % Title content
-\title{Paper Title}
+\title{Bundeswettbewerb Mathematik 2021}
 \author{Valentin Zwerschke}
-\date{16th February, 2021}
+\date{16 Februar, 2021}
 
 %\newfontfamily\russianfont[Script=Cyrillic]{TrueType}
 
 \begin{document}
 \maketitle
+
+\section*{Aufgabe 1}
+\section*{Aufgabe 2}
+\section*{Aufgabe 2 a}
+Den Bruch $\frac{3}{2021}$ als Stammbruch einer ersten Zahl $n$ und einem Rest.
+\begin{center}
+    $\frac{3}{2021} = \frac{1}{n} + (\frac{3}{2021} - \frac{1}{n})$
+\end{center}
+In einem nächsten Schritt machen wir die Differenz der Brüche gleichnahmig. Mit der Primzahlzerlegung $2021 = 43 \cdot 47$ unterscheiden wir dabei 4 Fälle.
+\begin{itemize}
+    \item $n = 43 \cdot m$
+    \item $n = 47 \cdot m$
+    \item $n = 43 \cdot 47 \cdot m$
+    \item $n = m$
+\end{itemize}
+Wobei \(m \in \mathbb{N}\) die nicht durch die Primzahlen (43 oder 47) teilbar ist.\\Im ersten Fall lautet der Zweite Summand im Term \(\frac{3m-47}{43 \cdot 47m}\). Damit dies ein Stammbruch wird müsste \(3m = 48\) sein. Dies führt zu keiner Lösung, da \(m\) ganzzahlig sein muss.\\Im zweiten Fall müsste \(3m = 44\) sein, was ebenfalls keine Lösung bringt.\\
+Im drittem Fall finden wir mit der gleichen Methode \(3m = 2\) sein. Auch dies führt zu keiner Lösungen.\\
+Im viertem Fall müsste \(3m = 47 \cdot 43 + 1\ = 2022\) sein. Mit \(m = 674\) ist hier eine Lösung gefunden. Die zugehörige Stammbruchzerlegung lautet \(\frac{3}{2021} = \frac{1}{674} + \frac{1}{43 \cdot 47 \cdot 674}\).\\
+Damit ist bewiesen, dass es nur eine Zerlegung ein zweier Stammbrüche gibt bei \(\frac{3}{2021}\).
+
+\section*{Aufgabe 2 b}
+\section*{Aufgabe 3}
+\section*{Aufgabe 4}
 
 \end{document}
