@@ -1,2 +1,2 @@
-# LaTeX-Tasks-Template
+# Mathe Bundeswettbewerb
 Template for LaTeX documents
