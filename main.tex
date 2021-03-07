@@ -46,14 +46,20 @@ Damit ist bewiesen, dass es nur genau eine Zerlegung ein zweier Stammbrüche gib
 In der zweiten Aufgabe ist eine nicht durch 3 teilbare Zahl \(n\) gesucht, 
 sodass \(\frac{3}{n}\) in 2021 verschiedene paare zweier Stammbrüche zerlegen werden kann.\\
 Mit dem gleichen Ansatz aus Aufgabenteil A schreiben wir \(\frac{3}{n} = \frac{1}{m} + (\frac{3}{n} - \frac{1}{m})\). 
-Wobei \(m\) eine beliebige Natürlich Zahl ist. Wir müssen also nun wieder prüfen bei welcher Wahl von \(m\), 
-\(\frac{3}{n} = \frac{1}{m}\) ein Stammbruch ist. Meine Hyptothese lautet, dass \(n = 2^{2 \cdot l}\) mit \(l \in \mathbb{N}\) 
-gute Chancen auf eine Lösung hat. Wie im Aufgabenteil A müssen wir die beiden Brüche gleichnamig machen.\\
-Hierfür benutzten wie wieder die Fallunterscheidung für $m$. \(m = m_1, m_2, m_3, ...\) mit \(m_i = 2^{i \cdot k}\). Jedes $m$ mit geradem Index führt zu keiner Lösung. Jedes $m$ mit ungeradem Index führt zu einer Lösung.\\
-Für den Fall eines geradem Indexes ($m = m_{2j}$) gilt:
+Wobei \(m\) eine beliebige natürliche Zahl ist. Wir müssen also nun wieder prüfen, bei welcher Wahl von \(m\), 
+der Term \(\frac{3}{n} - \frac{1}{m}\) ein Stammbruch ist. Meine Hyptothese lautet, dass \(n = 2^{2 \cdot l}\) mit \(l \in \mathbb{N}\) 
+gute Chancen auf eine Lösung hat. Wie im Aufgabenteil a müssen wir die beiden Brüche des Termes gleichnamig machen.\\
+Hierfür benutzten wie wieder die Fallunterscheidung für $m$.\\
+\(m = m_1, m_2, m_3, ..., m_{2l}\) mit \(m_i = 2^{i \cdot k}\). 
+Die Differenz, die eine Stammbruch sein Soll lässt sich wie folgt umformen für $m_i$. 
 \begin{equation}
-    \frac{3}{n} - \frac{1}{n} = \frac{3}{2^2l} 
+    \frac{3}{n} - \frac{1}{m} = \frac{3}{2^{2l}} - \frac{1}{2i \cdot k} = \frac{3k - 2^{2l - i}}{2^{2l} \cdot k}
 \end{equation}
+Dies ist genau dann ein Stammbruch, wenn ein $k$ gefunden wurde, welches für dieses Term gilt: $3k - 2^{2l - i} = 1$.\\
+Dies ist dann der Fall, wenn $i$ ungerade ist. Siehe Beweis weiter unten.\\
+Wir haben also bei der Fallunterscheidung je eine Lösung für \(m_1, m_3, m_5, ..., m_{2l - 1}\).\\
+Um genau 2021 Lösungen zu bekommen, setzten wir  $l = 2021$.\\\\
+Nun kommen wir zu dem oben angekündigtem Beweis, dass \(2^{2n - 1} + 1\) durch 3 teilbar ist.
 \section*{Aufgabe 3}
 \section*{Aufgabe 4}
 
