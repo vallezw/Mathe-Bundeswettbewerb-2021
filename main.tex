@@ -31,7 +31,7 @@ Den Bruch $\frac{3}{2021}$ als Stammbruch einer ersten Zahl $n$ und einem Rest.
 \begin{center}
     $\frac{3}{2021} = \frac{1}{n} + (\frac{3}{2021} - \frac{1}{n})$
 \end{center}
-In einem nächsten Schritt machen wir die Differenz der Brüche gleichnahmig. Mit der Primzahlzerlegung $2021 = 43 \cdot 47$ unterscheiden wir dabei 4 Fälle.
+In einem nächsten Schritt machen wir die Brüche der Differenz in der Klammer gleichnahmig. Mit der Primzahlzerlegung $2021 = 43 \cdot 47$ unterscheiden wir dabei 4 Fälle.
 \begin{itemize}
     \item $n = 43 \cdot m$
     \item $n = 47 \cdot m$
@@ -39,11 +39,21 @@ In einem nächsten Schritt machen wir die Differenz der Brüche gleichnahmig. Mi
     \item $n = m$
 \end{itemize}
 Wobei \(m \in \mathbb{N}\) die nicht durch die Primzahlen (43 oder 47) teilbar ist.\\Im ersten Fall lautet der Zweite Summand im Term \(\frac{3m-47}{43 \cdot 47m}\). Damit dies ein Stammbruch wird müsste \(3m = 48\) sein. Dies führt zu keiner Lösung, da \(m\) ganzzahlig sein muss.\\Im zweiten Fall müsste \(3m = 44\) sein, was ebenfalls keine Lösung bringt.\\
-Im drittem Fall finden wir mit der gleichen Methode \(3m = 2\) sein. Auch dies führt zu keiner Lösungen.\\
-Im viertem Fall müsste \(3m = 47 \cdot 43 + 1\ = 2022\) sein. Mit \(m = 674\) ist hier eine Lösung gefunden. Die zugehörige Stammbruchzerlegung lautet \(\frac{3}{2021} = \frac{1}{674} + \frac{1}{43 \cdot 47 \cdot 674}\).\\
-Damit ist bewiesen, dass es nur eine Zerlegung ein zweier Stammbrüche gibt bei \(\frac{3}{2021}\).
-
+Im drittem Fall finden wir mit der gleichen Methode: \(3m = 2\). Auch dies führt zu keiner Lösungen.\\
+Im viertem Fall müsste \(3m = 47 \cdot 43 + 1 = 2022\) sein. Mit \(m = 674\) ist hier eine Lösung gefunden. Die zugehörige Stammbruchzerlegung lautet \(\frac{3}{2021} = \frac{1}{674} + \frac{1}{43 \cdot 47 \cdot 674}\).\\
+Damit ist bewiesen, dass es nur genau eine Zerlegung ein zweier Stammbrüche gibt bei \(\frac{3}{2021}\).
 \section*{Aufgabe 2 b}
+In der zweiten Aufgabe ist eine nicht durch 3 teilbare Zahl \(n\) gesucht, 
+sodass \(\frac{3}{n}\) in 2021 verschiedene paare zweier Stammbrüche zerlegen werden kann.\\
+Mit dem gleichen Ansatz aus Aufgabenteil A schreiben wir \(\frac{3}{n} = \frac{1}{m} + (\frac{3}{n} - \frac{1}{m})\). 
+Wobei \(m\) eine beliebige Natürlich Zahl ist. Wir müssen also nun wieder prüfen bei welcher Wahl von \(m\), 
+\(\frac{3}{n} = \frac{1}{m}\) ein Stammbruch ist. Meine Hyptothese lautet, dass \(n = 2^{2 \cdot l}\) mit \(l \in \mathbb{N}\) 
+gute Chancen auf eine Lösung hat. Wie im Aufgabenteil A müssen wir die beiden Brüche gleichnamig machen.\\
+Hierfür benutzten wie wieder die Fallunterscheidung für $m$. \(m = m_1, m_2, m_3, ...\) mit \(m_i = 2^{i \cdot k}\). Jedes $m$ mit geradem Index führt zu keiner Lösung. Jedes $m$ mit ungeradem Index führt zu einer Lösung.\\
+Für den Fall eines geradem Indexes ($m = m_{2j}$) gilt:
+\begin{equation}
+    \frac{3}{n} - \frac{1}{n} = \frac{3}{2^2l} 
+\end{equation}
 \section*{Aufgabe 3}
 \section*{Aufgabe 4}
 
