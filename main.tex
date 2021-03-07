@@ -25,6 +25,7 @@
 \maketitle
 
 \section*{Aufgabe 1}
+
 \section*{Aufgabe 2}
 \section*{Aufgabe 2 a}
 Den Bruch $\frac{3}{2021}$ als Stammbruch einer ersten Zahl $n$ und einem Rest.
@@ -59,7 +60,18 @@ Dies ist genau dann ein Stammbruch, wenn ein $k$ gefunden wurde, welches für di
 Dies ist dann der Fall, wenn $i$ ungerade ist. Siehe Beweis weiter unten.\\
 Wir haben also bei der Fallunterscheidung je eine Lösung für \(m_1, m_3, m_5, ..., m_{2l - 1}\).\\
 Um genau 2021 Lösungen zu bekommen, setzten wir  $l = 2021$.\\\\
-Nun kommen wir zu dem oben angekündigtem Beweis, dass \(2^{2n - 1} + 1\) durch 3 teilbar ist.
+Nun kommen wir zu dem oben angekündigtem Beweis, dass \(2^{2n - 1} + 1\) durch 3 teilbar ist. Hierzu verwenden wir vollständige Induktion.\\
+Es gelte für ein \(n \in \mathbb{N}\), dass der Term \(2^{2n - 1} + 1\) ist durch 3 teilbar ist. Für $n = 1$ ist dieses Trivial erfüllt. Für $n + 1$ gilt: 
+\begin{equation}
+    2^{2(n + 1) - 1} + 1 = 4 \cdot (2^{2n - 1} + 1) - 3
+\end{equation}
+Da beide Summanden durch 3 teilbar sind, ist der ganze Term durch 3 teilbar, was zu beweisen war.\\
+Analog müssen wir noch beweisen, dass \(2^{2n} + 1\) nicht durch 3 teilbar ist. Hierzu verwenden wir wieder vollständige Induktion.\\
+Die Behauptung gelte für ein \(n \in \mathbb{N}\). Für $n = 1$ ist der Term 5, was nicht durch 3 teilbar ist. Für den Schritt nach $n + 1$ gilt: 
+\begin{equation}
+    2^{2(n + 1)} + 1 = 4 \cdot (2^{2n} + 1) - 3
+\end{equation}
+Da der erste Summand nicht durch 3 teilbar ist, ist der ganze Term nicht mehr durch 3 teilbar.
 \section*{Aufgabe 3}
 \section*{Aufgabe 4}
 
