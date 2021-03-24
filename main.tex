@@ -17,7 +17,7 @@
 % Title content
 \title{Bundeswettbewerb Mathematik 2021}
 \author{Valentin Zwerschke}
-\date{16 Februar, 2021}
+\date{8 März, 2021}
 
 %\newfontfamily\russianfont[Script=Cyrillic]{TrueType}
 
@@ -25,7 +25,51 @@
 \maketitle
 
 \section*{Aufgabe 1}
-
+Um diese Aufgabe zu lösen, habe ich sie in 2 Schritte aufgeteilt.\\
+Schritt 1: Wir teilen den Würfel wie beschrieben in zwei Quader ein. \(Q_1\) mit dem Volumen \(V_1 = 10 \cdot 10 \cdot n\) und $Q_2$ mit dem Volumen \(V_2 = 10 \cdot 10 \cdot (10 - n)\). Aus symmetrie Gründen brauchen wir nur die Zahl $n$ in dem Zahlenbereich von 1 - 5 zu betrachten.\\
+Nun müssen wir den größeren (bei $n = 5$, einen beliebigen) der beiden Quader nochmal hindurch schneiden. Hier unterscheide ich zwei Fälle.\\
+\begin{itemize}
+    \item Waargerechter Schnitt (Parallel zur \(10 \cdot 10\) Seite)
+    \begin{itemize}
+        \item $n = 1 ... 5$, $m = 1 ... (10 - n - 1)$
+        \item \(Q_1\) mit Volumen $V = 10 \cdot 10 \cdot n$
+        \item \(Q_2\) mit Volumen $V = 10 \cdot 10 \cdot (10 - n - m)$
+        \item \(Q_3\) mit Volumen $V = 10 \cdot 10 \cdot m$
+        \item Das Minimum vom
+    \end{itemize}
+    \item Senkrechter Schnitt (Parallel zur \(10 \cdot 10 - n\) Seite)
+    \begin{itemize}
+        \item Das Minimum vom Maximum läge bei $l = 5$
+        \item $n = 1 ... 5$, $l = 1 ... 5$
+        \item \(Q_1\) mit Volumen $V = 10 \cdot 10 \cdot n$
+        \item \(Q_2\) mit Volumen $V = 10 \cdot (10 - n) \cdot l$
+        \item \(Q_3\) mit Volumen $V = (10 - n) \cdot 10 \cdot (10 - l)$
+    \end{itemize}
+\end{itemize}
+\newpage
+Im Fall des waagerechten Schnitts ergibt sich das Minimale Volumen des jeweils größtem Quaders zu den verschiedenen Werten $n$ und $m$ entsprechend der untenstehenden Tabelle zu 400.\\\\
+\begin{tabular}{l|l|l|l}
+    n & m    & 10-n-m & Min von Max \\\hline
+    1 & 1..8 & 8..1   & 400         \\\hline
+    2 & 1..7 & 7..1   & 400         \\\hline
+    3 & 1..6 & 6..1   & 400         \\\hline
+    4 & 1..5 & 5..1   & 400         \\\hline
+    5 & 1..4 & 4..1   & 500        
+\end{tabular}
+\\\\
+Im Fall des senkrechten Schnitts ergibt sich das Minimale Volumen des jeweils größtem Quaders zu den verscheidenen Werten $n$ und $l$ entsprechend der untenstehenden Tabelle zu 350.
+\\\\
+\begin{tabular}{|l|l|l|l|l|l|l|l}
+    n & 10-n & l    & 10-l & 10x10xn & 10x(10-n)xl & 10x(10-n)x(10-l) & Min von Max \\\hline
+    1 & 9    & 1..9 & 9..1 & 100     & 90x(1..9)   & 90x(9..1)        & 450         \\\hline
+    2 & 8    & 1..9 & 9..1 & 200     & 80x(1..9)   & 80x(9..1)        & 400         \\\hline
+    3 & 7    & 1..9 & 9..1 & 300     & 70x(1..9)   & 70x(9..1)        & 350         \\\hline
+    4 & 6    & 1..9 & 9..1 & 400     & 60x(1..9)   & 60x(9..1)        & 400         \\\hline
+    5 & 5    & 1..9 & 9..1 & 500     & 50x(1..9)   & 50x(9..1)        & 500        
+\end{tabular}
+\\\\\\
+Somit haben wir das minimale Volumen gefunden. Man schneidet zunächst bei 3 und dann Parallel zur $10 \cdot 10$ Seite bei 5. \\
+Der kleinstmögliche Maximale Quader hat somit das Volumen von $7 \cdot 5 \cdot 10 = 350$
 \section*{Aufgabe 2}
 \section*{Aufgabe 2 a}
 Den Bruch $\frac{3}{2021}$ als Stammbruch einer ersten Zahl $n$ und einem Rest.
@@ -72,7 +116,4 @@ Die Behauptung gelte für ein \(n \in \mathbb{N}\). Für $n = 1$ ist der Term 5,
     2^{2(n + 1)} + 1 = 4 \cdot (2^{2n} + 1) - 3
 \end{equation}
 Da der erste Summand nicht durch 3 teilbar ist, ist der ganze Term nicht mehr durch 3 teilbar.
-\section*{Aufgabe 3}
-\section*{Aufgabe 4}
-
 \end{document}
